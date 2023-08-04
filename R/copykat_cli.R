@@ -25,7 +25,7 @@ parser <- add_argument(parser, arg = '--n_cores', type='integer', default=1, hel
 args <- parse_args(parser)
 
 rawmat <- as.matrix(read.table(args$rawmat, header = TRUE, sep = "\t",
-row.names = 0))
+row.names = 1))
 
 # check norm_cell_names
 
