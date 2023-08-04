@@ -1,9 +1,9 @@
-# copykat CLI ...test 
+i# copykat CLI ...test 
 
-library(argparse)
+library(argparser)
 library(copykat)
 
-parser <- ArgumentParser(description='CopyKat function parser')
+parser <- arg_parser(description='CopyKat function parser')
 
 parser$add_argument('--rawmat', type='character', default='rawdata', help='Raw count matrix, txt file, gene as row, 
 cell as column, tab delimited')
@@ -22,7 +22,7 @@ parser$add_argument('--plot_genes', type='logical', default='TRUE', help='Plot g
 parser$add_argument('--genome', type='character', default='hg20', help='Genome')
 parser$add_argument('--n_cores', type='integer', default=1, help='Number of cores')
 
-args <- parser$parse_args()
+args <- parse_args(parser)
 
 rawmat <- as.matrix(read.table(args$rawmat, header = TRUE, sep = "\t",
 row.names = 0))
