@@ -46,7 +46,7 @@ result <- copykat(
   LOW.DR = args$LOW_DR,
   UP.DR = args$UP_DR,
   win.size = args$win_size,
-  norm.cell.names = norma_cell_names,
+  norm.cell.names = norm_cell_names,
   KS.cut = args$KS_cut,
   sam.name = args$sam_name,
   distance = args$distance,
